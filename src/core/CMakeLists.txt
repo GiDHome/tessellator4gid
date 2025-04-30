@@ -9,4 +9,7 @@ add_library(tessellator-core
     "Staircaser.cpp"
 )
 
+find_package(Boost REQUIRED serialization)
+include_directories(${Boost_INCLUDE_DIR})
+
 target_link_libraries(tessellator-core tessellator-utils)

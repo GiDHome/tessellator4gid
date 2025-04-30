@@ -41,6 +41,16 @@ This can be done using a `CMakeUserPreset.json` file, for example:
 }
 ```
 
+## Compiling + Building with already installed vtk / boost / gtest
+
+```shell
+echo "we are in tessellator base dir"
+mkdir build
+cd build
+cmake -DBoost_INCLUDE_DIR=/...path.to../boost_1_75_0/   -DCMAKE_INSTALL_PREFIX=$HOME ..
+# eventually add -DVTK_DIR=/..../VTK/windows/vtk-8.0
+```
+
 ## Contributing
 
 ## Citing this work

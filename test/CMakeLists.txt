@@ -14,6 +14,16 @@ include_directories(
 	${PROJECT_SOURCE_DIR}/test/
 )
 
+# find_package(Boost REQUIRED serialization)
+find_package(Boost COMPONENTS program_options)
+include_directories(${Boost_INCLUDE_DIR})
+
+if ( CMAKE_BUILD_TYPE STREQUAL "Debug")
+    link_directories(${Boost_LIBRARY_DIR_DEBUG})
+else ( CMAKE_BUILD_TYPE STREQUAL "Debug")
+    link_directories(${Boost_LIBRARY_DIR_RELEASE})
+endif ( CMAKE_BUILD_TYPE STREQUAL "Debug")
+
 add_executable(tessellator_tests 
 	"app/launcherTest.cpp"
 	"app/vtkIOTest.cpp"

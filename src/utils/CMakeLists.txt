@@ -12,5 +12,13 @@ add_library(tessellator-utils
 )
 
 find_package(Boost REQUIRED graph)
-include_directories(${Boost_INCLUDE_DIRS})
-target_link_libraries(tessellator-utils Boost::graph)
+# include_directories(${Boost_INCLUDE_DIRS})
+include_directories(${Boost_INCLUDE_DIR})
+
+if ( CMAKE_BUILD_TYPE STREQUAL "Debug")
+    link_directories(${Boost_LIBRARY_DIR_DEBUG})
+else ( CMAKE_BUILD_TYPE STREQUAL "Debug")
+    link_directories(${Boost_LIBRARY_DIR_RELEASE})
+endif ( CMAKE_BUILD_TYPE STREQUAL "Debug")
+
+# target_link_libraries(tessellator-utils Boost::graph)

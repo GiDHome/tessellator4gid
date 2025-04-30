@@ -6,6 +6,10 @@ add_library(tessellator-meshers
     "OffgridMesher.cpp"
     "ConformalMesher.cpp"
 )
+
+find_package(Boost REQUIRED serialization)
+include_directories(${Boost_INCLUDE_DIR})
+
 target_link_libraries(tessellator-meshers tessellator-core tessellator-utils)
 
 if(TESSELLATOR_EXECUTION_POLICIES)

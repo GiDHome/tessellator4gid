@@ -26,3 +26,5 @@ sliced.vtk
 contour.vtk
 
 testData/
+
+*.tgz
