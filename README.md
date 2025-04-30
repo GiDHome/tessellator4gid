@@ -1,4 +1,6 @@
-# Tessellator mesher
+# Tessellator 4 GiD mesher
+
+This fork is to adapt the [Tessellator mesher](https://github.com/OpenSEMBA/tessellator) for GiD.
 
 [![License](https://img.shields.io/badge/License-GPL_3.0-blue.svg)](https://opensource.org/licenses/gpl-3.0) 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/mit) 
